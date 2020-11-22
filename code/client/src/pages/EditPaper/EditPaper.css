@@ -1,0 +1,172 @@
+.ep-l{
+  width:122px;
+}
+.ep-r{
+  width: 926px;
+  --ep-ic:13px;
+}
+.ep-func-bar{
+  width:250px;
+}
+
+.ep-func-bar > img{
+  width:13px;
+  height:13px;
+  margin:13px;
+  transition: all ease-in-out .4s;
+}
+
+.ep-func-bar > img:hover{
+  transform: scale(1.3);
+}
+
+.ep-paper{
+  background-color: #f8f8f8;
+  margin:20px;
+  margin-top:0px;
+	border-radius: 5px;
+}
+
+.ep-quiz-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 122px;
+	height: 62px;
+	background-color: #f8f8f8;
+  border-radius: 5px;
+  margin: 10px;
+  transition: all .6s;
+}
+
+.ep-quiz-card:hover{
+  box-shadow: -3px 0px 7px 1px 
+		rgba(92, 93, 93, 0.2);
+}
+
+.ep-quiz-card > img{
+  width: 22px;
+	height: 22px;
+}
+
+.ep-quiz-card-text{
+  align-self: center;
+}
+
+.ep-quiz-card-edit{
+  align-self: flex-end;
+  cursor: pointer;
+  font-size: 10px;
+	color: #005ecd;
+}
+
+.ep-add-quiz{
+  width: 135px;
+  height: 34px;
+  margin: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	background-color: #e6e6e6;
+  border-radius: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.ep-add-quiz > img{
+  width: 25px;
+  height:25px;
+}
+
+.ep-quiz-card-ed{
+  box-shadow: -3px 0px 7px 1px 
+		rgba(92, 93, 93, 0.2);
+}
+
+.ep-ip-title{
+  width: 90%;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+  background-color: #ffffff;
+	border-radius: 2px;
+  border: solid 1px #cecece;
+  margin:20px;
+}
+
+.ep-ip-title::placeholder{
+  color: red;
+}
+
+.ep-ip-detail{
+  width: 509px;
+	height: 68px;
+	background-color: #ffffff;
+	border-radius: 2px;
+  border: solid 1px #cecece;
+  margin:20px;
+}
+
+.ep-ip-inner{
+  margin: 20px;
+}
+
+.ep-paper > div:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ep-paper > div:first-child > label > input {
+  display: none;
+}
+
+.ep-paper > div:first-child > label, .ep-paper > div:first-child > span {
+  cursor: pointer;
+  color: #005ecd;
+  margin: 10px;
+}
+
+.ep-im-container {
+  padding-left:23px;
+  padding-right:23px;
+}
+
+.ep-quiz-card > div:first-child > div {
+  text-align: center;
+}
+
+.ep-paper > .file-label > *{
+  font-weight: bold;
+}
+
+.ec-item > span {
+  min-width: 20px;
+  display: inline-block;
+}
+
+.ec-item {
+  margin: 2px;
+}
+
+.ep-paper > div:last-child {
+  overflow-y: scroll;
+  min-height: 60vh;
+  height: 65vh;
+  resize: vertical;
+}
+
+.ep-r > div:first-child{
+  margin-top: 10px;
+}
+
+.ep-r > div:first-child > div{
+  margin-left: 20px;
+  line-height: 40px;
+  font-size: 18px;
+  margin-bottom: -10px;
+  font-weight: 600;
+  max-width: 680px;
+  max-height: 50px;
+  overflow: hidden;
+}

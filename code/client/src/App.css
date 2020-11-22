@@ -1,0 +1,76 @@
+*{
+  --page-width:1200px;
+  --header-height:62px;
+  --footer-height:100px;
+  --logo-height:22px;
+  --padding-aside:calc((100vw - var(--page-width))/2);
+  --innerPage-padding:59px;
+  --innerPage-w:calc(var(--page-width) - 2*var(--innerPage-padding));
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+}
+
+.innerPage{
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  width:var(--page-width);
+  margin-top:var(--header-height);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left:var(--innerPage-padding);
+  padding-right:var(--innerPage-padding);
+  padding-bottom:calc(var(--innerPage-padding)/2);
+  background-color:white;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+}
+
+.aside{
+  justify-content: space-between;
+}
+
+.around{
+  justify-content: space-around;
+}
+
+.center{
+  justify-content: center;
+}
+
+.row-reverse{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.line-limit-length {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+}
+
+.container{
+  padding-top:30px;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+.responsive{
+  transition: all .2s ease-in-out;
+  transform-origin: 50% 50%;
+}
+
+.responsive:hover{
+  transform: scale(1.15)
+}

@@ -1,0 +1,16 @@
+.info-table-head{
+  background-color: #acc4e0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.info-table-row{
+  background-color: #f7f7f7;
+  font-size: 11px;
+}
+
+.info-table-cell{
+  text-align: center;
+  height: 38px;
+  width:25%;
+}

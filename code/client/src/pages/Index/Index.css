@@ -1,0 +1,28 @@
+#index-notice{
+    width:400px;
+}
+
+#index-studata{
+    width:263px;
+}
+
+#index-exam{
+    margin-top:15px;
+    width:700px;
+}
+
+.page-craousel{
+    width:330px;
+}
+
+.score-text{
+    font-size:12px;
+    height:36px;
+    line-height: 36px;
+    transition: all .6s;
+}
+
+.score-texts{
+    padding-left: 36px;
+    padding-right: 36px;
+}

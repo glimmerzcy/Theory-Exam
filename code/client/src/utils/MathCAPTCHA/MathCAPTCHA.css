@@ -1,0 +1,33 @@
+.captcha-container > div:first-child {
+  width: fit-content;
+  padding:9px;
+  margin:auto;
+}
+
+.captcha-container > div:first-child > p{
+  text-align: center;
+  font-size: 10px;
+  color: blueviolet;
+  transition: all .6s;
+}
+
+.captcha-container > div:first-child > p:hover{
+  text-align: center;
+  font-size: 10px;
+  transform: scale(1.1);
+  color: blue;
+}
+
+.captcha-container {
+  margin:10px;
+}
+.captcha-container .row.center {
+  align-items: center;
+}
+.captcha-container .row.center:nth-child(2) span {
+  margin-right: 10px;
+}
+.captcha-container .row.center:nth-child(2) input {
+  padding: 5px;
+  outline: none;
+}

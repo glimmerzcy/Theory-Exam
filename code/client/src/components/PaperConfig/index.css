@@ -1,0 +1,22 @@
+.ep-ip-sb > input{
+  border: none;
+}
+
+.ep-ip-inner > div > div,.ep-ip-inner > div > input{
+  margin:2px;
+}
+
+.ep-ip-inner > div > input{
+  height: 22px;
+}
+
+.ep-ip-inner > div > input::placeholder{
+  color: red;
+}
+
+.ep-ip-inner > div > div{
+  text-align: end;
+  vertical-align: center;
+  line-height: 18px;
+  height: 18px;
+}

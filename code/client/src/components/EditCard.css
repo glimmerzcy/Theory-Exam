@@ -1,0 +1,100 @@
+.ec-head > img{
+  width: 13px;
+  height:13px;
+}
+
+.ec-head > input{
+  width: 800px;
+}
+
+.ec-content{
+  margin:29px;
+  padding:18px;
+  transition: all ease-in-out .6s;
+}
+
+.ec-item > img{
+  width: 13px;
+  height:13px;
+}
+
+.ec-item > span{
+  transition: all .6s ease-out;
+  transform-origin: 25% 50%;
+  transform: rotate(0deg);
+}
+
+.ec-item:hover > span{
+  transform: rotate(360deg);
+}
+
+.ec-content > div > div{
+  overflow-y: auto;
+}
+
+.ec-item > input,.ec-content > div > textarea{
+  border: solid 1px #f8f8f8;
+  background-color: #f8f8f8;
+  transition: border .6s ease-out;
+  padding: 3px;
+}
+
+.ec-item > input{
+  transition: all .6s ease-in-out;
+}
+
+.ec-content > div > textarea{
+  min-width:96%;
+  min-height: 1em; 
+  height: 30px;
+  padding: 5px;
+  resize: vertical;
+}
+
+.ec-item > input:focus,.ec-item:hover > input,.ec-content > div > textarea:focus,.ec-content > div:hover > textarea{
+  border-color: lightgray;
+  background-color: white;
+}
+
+.ec-content > div > .ec-add-item{
+  transform: scale(0);
+  opacity: 0;
+  transition: all .6s ease-in-out;
+  width: 184px;
+  text-align: center;
+	background-color: #ffffff;
+	border-radius: 2px;
+	border: solid 1px #cecece;
+}
+
+.ec-content > div > img,.ec-item > img{
+  transform: scale(0) rotate(0deg);
+  transition: all .6s ease-in-out;
+}
+
+.ec-content:hover > div > .ec-add-item{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.ec-content:hover > div > img,.ec-item:hover > img,.ec-item > .input:focus + img{
+  transform: scale(1) rotate(360deg);
+}
+
+
+.ec-item > .input{
+  width: 92%;
+  text-overflow: ellipsis;
+}
+
+.ec-item{
+  margin: 4px 0px;
+}
+
+.ec-head > div{
+  min-width: 100%;
+  min-height: 2em;
+  overflow-x: hidden;
+  overflow-y: auto;
+  resize: none;
+}

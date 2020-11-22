@@ -1,0 +1,59 @@
+.ex-detail-chart{
+  width: 388px;
+	height: 316px;
+	background-color: #f8f8f8;
+  border-radius: 7px;
+  padding-right:30px;
+}
+
+.ex-detail-chart-head{
+  padding:40px;
+}
+
+.ex-details{
+  width:456px;
+  height:316px;
+}
+
+.ex-detail-small{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: 209px;
+	height: 110px;
+	background-color: #f8f8f8;
+  border-radius: 7px;
+  padding: auto;
+}
+
+.ex-detail-big{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: 456px;
+	height: 168px;
+	background-color: #f8f8f8;
+  border-radius: 7px;
+  padding: auto;
+}
+
+.ex-detail-content{
+  padding-top:calc(143px - var(--innerPage-padding));
+  margin-left:calc(143px - var(--innerPage-padding));
+  margin-right:calc(143px - var(--innerPage-padding));
+}
+
+.ex-detail-hr{
+  width: 914px;
+	height: 2px;
+  background-color: #e8e8e8;
+  margin-bottom:53px;
+}
+
+.ex-detail-bar{
+  width: 250px;
+}
+
+.ex-details > div > div > span {
+  color: blue;
+}

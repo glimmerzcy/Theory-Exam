@@ -1,0 +1,28 @@
+.notice-craousel{
+  width:330px;
+}
+
+.notice-content{
+  width:700px;
+}
+
+.notice-text{
+  width: 100%;
+  text-align: center;
+  margin:10px;
+}
+
+.notice-info{
+  font-size: 16px;
+}
+
+.notice-time{
+  font-size:12px;
+}
+
+.notice-detail{
+  padding:32px;
+  font-size:15px;
+  min-height: 100px;
+	border: solid 2px #f8f8f8;
+}

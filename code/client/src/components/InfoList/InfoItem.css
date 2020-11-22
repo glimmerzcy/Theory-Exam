@@ -1,0 +1,21 @@
+.info-item{
+    --item-height:36px;
+}
+
+.info-item-text{
+    font-size:12px;
+    height: var(--item-height);
+    line-height: var(--item-height);
+    max-width: 300px;
+    min-width:70px;
+    max-height: 3em;
+    overflow: hidden;
+}
+
+.info-item-char{
+    color:orange;
+    margin-right:15px;
+    font-size:12px;
+    height: var(--item-height);
+    line-height: var(--item-height);
+}

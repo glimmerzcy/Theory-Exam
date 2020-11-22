@@ -1,0 +1,36 @@
+.header{
+    --header-height:62px;
+    --font-size:16px;
+    width:100%;
+    height: var(--header-height);
+    padding-left:var(--padding-aside);
+    padding-right:var(--padding-aside);
+    background-color:white;
+    position: fixed;
+    top:0;
+    z-index:100;
+    box-shadow: 0px 2px 5px #eeeeee;
+}
+
+.header-text{
+    --margin:1vw;
+    font-size: var(--font-size);
+    height:var(--header-height);
+    line-height: var(--header-height);
+    margin-left: var(--margin);
+    margin-right: var(--margin);
+    cursor: pointer;
+}
+
+.logo{
+    --logo-padding:calc((var(--header-height) - var(--logo-height))/2.4);
+    width:32px;
+    height:var(--header-height);
+    padding-top:var(--logo-padding);
+    padding-bottom:var(--logo-padding);
+}
+
+.header-title{
+    color: #005ecd;
+    font-weight: bold;
+}

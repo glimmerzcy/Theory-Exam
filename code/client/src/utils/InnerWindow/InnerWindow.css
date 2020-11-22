@@ -1,0 +1,87 @@
+.g-i-w-container{
+  position: fixed;
+  top:0;
+  z-index:100000;
+  display: flex;
+  width: 100%;
+  height:100%;
+  justify-content: center;
+  align-items: center;
+  transition: all .6s;
+  background-color: rgba(65, 65, 65, 0.425);
+}
+
+.g-i-w{
+  background-color: #ffffff;
+	box-shadow: -3px 0px 7px 1px 
+    rgba(92, 93, 93, 0.15);
+  max-width: 60%;
+  border-radius: 2px;
+  transition: all .6s;
+  padding: 26px 36px;
+  font-size: 1em;
+}
+
+.g-i-w-toast{
+  min-width: 150px;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  padding:20px;
+}
+
+.g-i-w-mask{
+  min-width: 150px;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  padding:20px;
+}
+
+.g-i-w-loading{
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+}
+
+.iw-bn{
+  --iw-bn-t: 0.9em;
+  --iw-bn-pd: 0.7em;
+  min-width: 53px;
+  line-height: var(--iw-bn-t);
+  min-height: calc(var(--iw-bn-t) + 2 * var(--iw-bn-pd));
+  font-size: var(--iw-bn-t);
+  text-align: center;
+  border-radius: 3px;
+  padding: var(--iw-bn-pd);
+}
+
+.iw-container{
+  padding:20px;
+}
+
+.iw-confirm{
+  background-color: #005ecd;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.iw-cancel{
+  background-color: #f7f7f7;
+  color:#3c3c3c;
+  cursor: pointer;
+}
+
+.g-i-w-container > div > h2, .g-i-w-toast > h2{
+  align-self: center;
+  margin: 5px;
+  font-size: 1.5em;
+}
+.iw-container h3 {
+  margin: 0;
+  font-size: 1em;
+}
+.iw-container {
+  padding: 20px 40px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,69 @@
+.fil-stu-table{
+  --table-w:850px;
+  --table-c:7;
+  width:var(--table-w);
+}
+
+.fil-stu-er{
+  width: 228px;
+}
+
+.fil-stu-er-head{
+  margin:10px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.fil-stu-er-card{
+  width: 228px;
+	min-height: 271px;
+	background-color: #ffffff;
+	box-shadow: -3px 0px 7px 1px 
+		rgba(92, 93, 93, 0.08);
+  border-radius: 2px;
+  padding:27px;
+}
+
+.fil-stu-er-card > div {
+  margin:3px;
+}
+
+.fil-stu-er-card > div > div > * {
+  width: 135px;
+} 
+
+.fil-stu-er-bn {
+  width: 68px;
+	height: 23px;
+	background-color: #005ecd;
+  border-radius: 2px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.fil-stu-er-card > div > div > div {
+  position: absolute;
+  background-color: #f1f1f1;
+  text-align: center;
+  max-height: 0px;
+  overflow-y: auto;
+  transition: all .4s ease-in-out;
+  transform-origin: top;
+}
+
+.fil-stu-er-card > div > div:hover > div{
+  max-height: 90px;
+  cursor: pointer;
+}
+
+.fil-stu-er-card > div > div > div > div{
+  transition: all .6s;
+}
+
+.fil-stu-er-card > div > div > div > div:hover{
+  background-color: #e4e4e4;
+}
+
+.fil-stu-er-card > div > div > input{
+  text-overflow: ellipsis;
+}

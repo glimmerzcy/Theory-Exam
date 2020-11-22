@@ -1,0 +1,29 @@
+.footer{
+    width: auto;
+    min-width:1200px;
+    padding:20px;
+    height: var(--footer-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: #005ecd;
+    color:white;
+}
+
+.footer div:nth-child(1), .footer div:nth-child(2) {
+    font-size: 0.86em;
+}
+
+.footer a {
+    color: white;
+}
+
+small#foo{
+    transition: all .6s ease-in-out;
+    opacity: 0;
+}
+
+small#foo:hover{
+    opacity: 1;
+}

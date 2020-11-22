@@ -1,0 +1,27 @@
+.expaper-fser{
+  margin-bottom:-10px;
+}
+
+.expaper-cards{
+  width: var(--innerPage-w);
+  flex-wrap:wrap;
+}
+
+.expaper-title{
+  margin:16px;
+}
+
+.expaper-card{
+  margin:16px;
+}
+
+.expaper-add{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.expaper-add > img {
+  width: 46px;
+	height: 46px;
+}
