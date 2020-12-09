@@ -55,7 +55,7 @@
 .line-limit-length {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap; 
+  white-space: nowrap;
 }
 
 .container{
@@ -73,4 +73,7 @@
 
 .responsive:hover{
   transform: scale(1.15)
+}
+.html-text {
+    white-space: pre-wrap;
 }

@@ -2,7 +2,7 @@ import Route from '../RouteConfig'
 import Store from '../../utils/Store'
 import React from 'react'
 
-export const func_icon = id => [
+export const func_icon = (id, title) => [
   [
     {
       icon: 'edit',
@@ -34,7 +34,7 @@ export const func_icon = id => [
       title: '导出考试成绩信息',
       click: async () => {
         await window.showLoading()
-        await (Store.request('excel/export', id)())
+        await (Store.request('excel/export', { id, title })())
         await window.hideLoading()
       }
     },

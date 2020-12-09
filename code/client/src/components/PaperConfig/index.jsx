@@ -85,15 +85,21 @@ class CM extends React.Component {
     //submit check will be done at here
     Store.infoList.paper.head = { ...this.state }
     const keys = ['title', 'time-limit', 'max-times', 'date-from', 'date-to']
-    for (let key of keys)
-      if (this.state[key] === '') {
-        onError()
-        return
-      }
+    for (let key of keys) {
+        if (this.state[key] === '') {
+            onError()
+            return
+        }
+        if (!this.config[key].check(this.state[key])) {
+            onError(this.config[key].placeholder)
+        }
+    }
+
     if (new Date(this.state['date-from']) >= new Date(this.state['date-to'])) {
       onError('不允许结束日期早于开始日期')
       return
     }
+
     let { onConfirm } = this.props
     onConfirm && onConfirm()
     window.closeIW()
@@ -120,7 +126,7 @@ class CM extends React.Component {
               <input {...setClass('min-score',true)} disabled defaultValue='60' type='number' />
               <input {...setClass('date-from')} max={this.state['date-to']} type='datetime-local' />
               <input {...setClass('date-to')} min={this.state['date-from']} type='datetime-local' />
-              <input {...setClass('tip')}  type='text' />
+              <textarea {...setClass('tip')}  type='text' />
               <select {...setClass('aim')} >
                   <option value='0'>校级</option>
                   <option value='1'>院级</option>

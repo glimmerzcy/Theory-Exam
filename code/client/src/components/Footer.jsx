@@ -6,10 +6,6 @@ export default class Footer extends React.Component {
         return (
             <div className='footer'>
                 <div>欢迎加群
-                <a target="_blank" 
-                    href="//shang.qq.com/wpa/qunwpa?idkey=bdafef767a13f9734f150cd1fa0887128945c5ba5f396fe4b6559b5071afa771">
-                    738068756 
-                </a>
                 &nbsp; 738064793
                 进行问题反馈</div>
                 <div>我们将第一时间为您解答</div>
@@ -18,4 +14,4 @@ export default class Footer extends React.Component {
             </div>
         )
     }
-} 
+}

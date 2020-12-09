@@ -3,7 +3,6 @@ import Route from '../../config/RouteConfig'
 
 export default async (store) => {
     let postData
-    console.log(store.infoList.paper.head.aim)
     if (store.infoList.paper.head.aim == 0) {
         postData = {
             paper_id: store.infoList.paper.head.id

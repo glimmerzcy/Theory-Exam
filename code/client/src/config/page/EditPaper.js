@@ -41,11 +41,15 @@ export const func_icon = [
     title:'发布考试',
     click() {
       Store.infoList.stu_table = []
-      if(Store.infoList.paper.body[0].quiz.length < 40  || Store.infoList.paper.body[1].quiz.length < 30 ){
-        window.showToast('题目数量不足最低限制，无法发布')
-        return
+      for (let body of Store.infoList.paper.body) {
+          let quiz = body.quiz
+          if (quiz.length < body.config.num) {
+            window.showToast('题目数量不足最低限制，无法发布')
+            return
+          }
       }
-      if(Store.infoList.paper.calculateScore() < 100){
+
+      if (Store.infoList.paper.calculateScore() < 100) {
         window.showToast('分数不足100分')
         return
       }

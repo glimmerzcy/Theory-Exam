@@ -20,7 +20,7 @@ export default {
       },
       {
           text:() => Store.state.userName,
-          onClick: () => window.navigateTo('~https://i.twtstudio.com')
+          onClick: () => window.navigateTo('~https://i.twt.edu.cn')
       },
       { display: 'block' }
   ],

@@ -21,7 +21,7 @@ class ExCard extends React.Component {
       '已发布': 'started_at',
       '已完成': 'ended_time'
     }
-    let date = `${this.props.assign[date_list[status]]}`.split(' ')[0], funcs = func_icon(id)
+    let date = `${this.props.assign[date_list[status]]}`.split(' ')[0], funcs = func_icon(id, title)
     funcs = status === '未发布' ? [funcs[0]] : [[funcs[0][1],...funcs[1]]]
     return (
       <div className='excard'>

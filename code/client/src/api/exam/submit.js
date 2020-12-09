@@ -32,9 +32,15 @@ export default async store => {
     cookieManage.deleteStoreCookie()
     window.iwType() === 'loading' && await window.hideLoading()
     return await window.showModal({
-      view: <h3>得分:{res.data}</h3>,
-      onConfirm: () => window.navigateTo('/student'),
-      onCancel: () => window.navigateTo('/student')
+        view: <h3>得分:{res.data}</h3>,
+        onConfirm: async () => {
+            await store.request('log/status')()
+            window.navigateTo('/student')
+        },
+        onCancel: async () => {
+            await store.request('log/status')()
+            window.navigateTo('/student')
+        }
     })
   }
 

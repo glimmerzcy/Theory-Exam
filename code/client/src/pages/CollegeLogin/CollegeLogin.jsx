@@ -58,13 +58,12 @@ const CollegeLogin = () => {
                 <form>
                     {
                         config.map((ele, i) => (
-
-                                <div className='row aside' key={i}>
-                                    <span>{ele.text}</span>
-                                    <div>
-                                        <input {...ele.option} />
-                                    </div>
+                            <div className='row aside' key={i}>
+                                <span>{ele.text}</span>
+                                <div>
+                                    <input {...ele.option} />
                                 </div>
+                            </div>
                         ))
                     }
                 </form>

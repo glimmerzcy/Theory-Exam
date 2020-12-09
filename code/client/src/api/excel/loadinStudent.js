@@ -17,7 +17,7 @@ export default async (store, getFile) => {
         if (!students[0]) throw '格式不正确'
         let stu_ids = store.infoList.stu_table.reduce((acc, val) => acc[val[0]] = val[1] , {})
         for (let student of students) {
-            let id = student['学号']
+            let id = +student['学号']
             if (!stu_ids[id]) {
                 store.infoList.stu_table.push([id, student['姓名']])
                 stu_ids[id] = student['姓名']

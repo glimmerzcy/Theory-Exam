@@ -1,7 +1,7 @@
 import React from 'react'
 
 // export const BASE_URL = 'https://theory.twt.edu.cn'
-export const BASE_URL = 'https://localhost:8000'
+export const BASE_URL = 'http://localhost:8000'
 
 const defaultGET = {
     method: 'GET',
@@ -27,6 +27,9 @@ async function request(url, setting, isJSON) {
         if (!res.ok) {
             if (res.status >= 500) {
                 throw new Error(res.status + ": 请换成校园网再试试呢")
+            }
+            if (res.status === 429) {
+                throw new Error(res.status + ": 当前提交次数过多，请不要频繁刷新，稍后再试试")
             }
             throw res.status
         }

@@ -10,10 +10,13 @@
   transition: all .6s;
   background-color: rgba(65, 65, 65, 0.425);
 }
-
+.g-i-w-model {
+    max-height: 90%;
+    overflow-y: scroll;
+}
 .g-i-w{
   background-color: #ffffff;
-	box-shadow: -3px 0px 7px 1px 
+	box-shadow: -3px 0px 7px 1px
     rgba(92, 93, 93, 0.15);
   max-width: 60%;
   border-radius: 2px;
