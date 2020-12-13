@@ -1,0 +1,53 @@
+#include:
+#  - project: 'ops/gitlab-ci-template'
+#    file: 'template/laravel.yml'
+
+############################################################
+############# 上下两部分代码实现的功能一样,但不可同时  #############
+############# 使用,正常情况下使用上面的部分,若集群中的 #############
+############# git的ssl证书验证失败则使用用下面的部分. #############
+#############################################################
+
+pre_build:
+  stage: pre_build
+  image:
+    name: alpine/git:v2.24.1
+    entrypoint: [""]
+  script:
+    # 关闭 git 的 ssl 证书验证
+    - git config --global http.sslVerify false
+    # 生成.env
+    - cat $ENV_FILE > ./.env
+    # 生成 deployment 目录
+    - mkdir -p ./deployment
+    # 下载默认的供laravel使用的 Dockerfile
+    - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@git.twt.edu.cn/ops/Dockerfiles.git
+    - cp ./Dockerfiles/laravel_runner/Dockerfile ./
+    - cp ./Dockerfiles/laravel_runner/apache2.conf ./deployment
+  artifacts:
+    paths:
+      - Dockerfile
+      - deployment/
+      - .env
+    expire_in: 3 days
+
+
+include:
+  # 声明stages 使用公共的
+  - project: 'ops/gitlab-ci-template'
+    file: 'template/laravel.yml'
+
+  # install_dependence 采用laravel项目独特的
+  - project: 'ops/gitlab-ci-template'
+    file: 'jobs/laravel-install_dependence.yml'
+
+  # build 使用公共的
+  - project: 'ops/gitlab-ci-template'
+    file: 'jobs/common-build.yml'
+
+  # deploy_to_production 使用公共的
+  - project: 'ops/gitlab-ci-template'
+    file: 'jobs/common-deploy_to_production.yml'
+
+
+

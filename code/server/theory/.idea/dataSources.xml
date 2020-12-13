@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="com_twt_new_theory@39.105.59.59" uuid="65eadf5d-5820-4c00-b9a1-a7996114464a">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://39.105.59.59:3306/com_twt_new_theory</jdbc-url>
+    </data-source>
+  </component>
+</project>
