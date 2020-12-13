@@ -1,4 +1,4 @@
-import Store from '../../utils/Store'
+import Store from '@utils/Store'
 import RouteConfig from '../RouteConfig'
 
 export default {
@@ -20,7 +20,7 @@ export default {
       },
       {
           text:() => Store.state.userName,
-          onClick: () => window.navigateTo('~https://i.twt.edu.cn')
+          onClick: () => window.navigateTo(RouteConfig.ExPaper.route)
       },
       { display: 'block' }
   ],

@@ -1,4 +1,4 @@
-import { get } from '../../utils/request'
+import { get } from '@utils/request'
 import React from 'react'
 export default async store => {
   let { data } = (await get('api/main/page/v1'))

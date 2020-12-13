@@ -3,7 +3,7 @@ import { observer } from 'mobx-react'
 
 import './StuTable.css'
 
-import Store from '../utils/Store'
+import Store from '../.@utils/Store'
 
 const handleSelect = i => e => {
     Store.infoList.college_codes.push(Store.infoList.all_college[i])

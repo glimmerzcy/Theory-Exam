@@ -1,8 +1,7 @@
-import { post } from '../../utils/request'
+import { post } from '@utils/request'
 import React from 'react'
 import syncAll from './all'
 import sync from './get'
-import Time from '../../utils/Time'
 
 export default async store => {
   let paper

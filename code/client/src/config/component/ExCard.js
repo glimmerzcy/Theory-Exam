@@ -1,5 +1,5 @@
 import Route from '../RouteConfig'
-import Store from '../../utils/Store'
+import Store from '@utils/Store'
 import React from 'react'
 
 export const func_icon = (id, title) => [

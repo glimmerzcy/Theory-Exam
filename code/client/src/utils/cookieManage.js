@@ -11,12 +11,14 @@ const cookieProxy = function() {
     const setCookie = (name, val) => document.cookie = `${name}=${val}`;
     const deleteCookie = (name) => document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:01 GMT;`;
     return new Proxy(cookie, {
-        set: (obj, prop, val) => (
-            setCookie(prop, val), Reflect.set(obj, prop, val)
-        ),
-        deleteProperty: (obj, prop) => (
-            deleteCookie(prop), Reflect.deleteProperty(obj, prop)
-        )
+        set: (obj, prop, val) => {
+            setCookie(prop, val)
+            Reflect.set(obj, prop, val)
+        },
+        deleteProperty: (obj, prop) => {
+            deleteCookie(prop)
+            Reflect.deleteProperty(obj, prop)
+        }
     })
 
 }

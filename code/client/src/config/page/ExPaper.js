@@ -1,6 +1,6 @@
 const statusFilter = targetStatus => ({
   text:targetStatus,
-  func:item => targetStatus == item.status
+  func:item => targetStatus === item.status
 })
 
 export const filters = [

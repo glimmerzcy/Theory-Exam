@@ -1,7 +1,7 @@
 import React from "react"
 import Time from "../Time"
 
-import { aniDuration, restDuration, loadSVG } from "./config"
+import { aniDuration, restDuration, loadSVG } from "@config"
 import "./InnerWindow.css"
 
 export default class extends React.Component {

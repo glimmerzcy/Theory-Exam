@@ -1,4 +1,4 @@
-import { get } from '../../utils/request'
+import { get } from '@utils/request'
 
 const getFilter = (stus, key) => [...new Set(stus.map(stu => stu[key]))]
 

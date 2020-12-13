@@ -10,12 +10,12 @@ let seed = 0
 
 function newFormula() {
   data = data.map(i => random(1, 5))
-  let [a, b, k1, k2, k3] = data
+  let [a, , k1, k2, k3] = data
     return `${a}\\times${k1}+${k2}-${k3}=?`
 }
 
 function getResult() {
-  let [a, b, k1, k2, k3] = data
+  let [a, , k1, k2, k3] = data
     return a * k1 + k2 - k3
 }
 
@@ -27,7 +27,7 @@ class MathCAPTCHA extends React.Component {
     this.newFormula = this.newFormula.bind(this)
   }
   onChanged(e) {
-    if (e.target.value == getResult())
+    if (e.target.value === getResult())
       this.props.onCorrect()
   }
   newFormula() {
@@ -35,7 +35,7 @@ class MathCAPTCHA extends React.Component {
     this.setState({ formula })
   }
   render() {
-    if (this.props.seed != seed) {
+    if (this.props.seed !== seed) {
       seed = this.props.seed
       this.newFormula()
     }

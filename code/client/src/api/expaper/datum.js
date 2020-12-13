@@ -1,4 +1,4 @@
-import { get } from '../../utils/request'
+import { get } from '@utils/request'
 
 export default async (store, paper_id) => {
   let res = await get('api/histogram', { paper_id })

@@ -2,16 +2,16 @@ import React from 'react'
 import { observer } from 'mobx-react'
 import './ExPaper.css'
 
-import Title from '../../components/InfoList/InfoTitle'
-import Card from '../../components/ExCard'
-import ConfigModal from '../../components/PaperConfig/index'
+import Title from '@components/InfoList/InfoTitle'
+import Card from '@components/ExCard'
+import ConfigModal from '@components/PaperConfig/index'
 
-import '../../components/ExCard.css'
-import Route from '../../config/RouteConfig'
+import '@components/ExCard.css'
+import Route from '@config/RouteConfig'
 
-import { filters, sorts } from '../../config/page/ExPaper'
-import Store from '../../utils/Store'
-import { Paper } from '../../config/ClassDefine'
+import { filters, sorts } from '@config/page/ExPaper'
+import Store from '@utils/Store'
+import { Paper } from '@config/ClassDefine'
 
 function select(obj, target, that) {
   let func = e => {
@@ -63,7 +63,7 @@ class ExPaper extends React.Component {
             )
           }
           <div className='expaper-card excard expaper-add' onClick={this.add}>
-            <img src={require('../../assets/add-dark.png')} />
+            <img src={require('../../assets/add-dark.png')} alt=""/>
           </div>
         </div>
       </div>

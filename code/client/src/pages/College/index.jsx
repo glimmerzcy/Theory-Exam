@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Index from '../Index/Index'
+import Index from '../Index'
 
 class Student extends React.Component {
   render() {

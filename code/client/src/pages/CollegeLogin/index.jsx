@@ -1,8 +1,8 @@
 import React, { useState, useCallback } from 'react'
-import { post } from '../../utils/request'
+import { post } from '@utils/request'
 import './CollegeLogin.css'
-import Store from '../../utils/Store'
-import Route from '../../config/RouteConfig'
+import Store from '@utils/Store'
+import Route from '@config/RouteConfig'
 
 const CollegeLogin = () => {
     const [userName, setUserName] = useState('')

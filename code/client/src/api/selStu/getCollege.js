@@ -1,4 +1,4 @@
-import { get } from '../../utils/request'
+import { get } from '@utils/request'
 
 export default async store => {
   let res = await get('api/colleges/v1')

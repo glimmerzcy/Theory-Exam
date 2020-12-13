@@ -1,11 +1,11 @@
 import React from 'react'
 import {observer} from 'mobx-react'
 
-import Index from '../Index/Index'
-import InfoList from '../../components/InfoList/InfoList'
+import Index from '../Index'
+import InfoList from '@components/InfoList/InfoList'
 
-import Store from '../../utils/Store'
-import { mypaper } from '../../config/page/Student'
+import Store from '@utils/Store'
+import { mypaper } from '@config/page/Student'
 import './index.css'
 
 @observer

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Chart, Axis, Tooltip, Geom } from 'bizcharts'
-import { axis, gemo ,width ,height } from '../config/component/Chart'
+import { axis, gemo ,width ,height } from '@config/component/Chart'
 
 class ScoreChart extends React.Component {
   render() {

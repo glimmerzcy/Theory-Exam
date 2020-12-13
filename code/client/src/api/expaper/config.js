@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { get } from '../../utils/request'
-import { Paper } from '../../config/ClassDefine'
-import CM from '../../components/PaperConfig/index'
+import { get } from '@utils/request'
+import { Paper } from '@config/ClassDefine'
+import CM from '@components/PaperConfig/index'
 
 export default async (store, paper_id) => {
   let res

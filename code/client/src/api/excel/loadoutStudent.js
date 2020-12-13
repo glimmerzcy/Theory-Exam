@@ -1,5 +1,5 @@
 import XLSX from 'xlsx'
-import { sel_stu } from '../../config/component/StuTable'
+import { sel_stu } from '@config/component/StuTable'
 
 export default store => {
   let excel

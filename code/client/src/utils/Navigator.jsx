@@ -1,7 +1,7 @@
 import React from 'react'
 import { withRouter } from "react-router-dom";
 import Store from './Store'
-import Route from '../config/RouteConfig'
+import Route from '@config/RouteConfig'
 
 @withRouter
 class Navigator extends React.Component {

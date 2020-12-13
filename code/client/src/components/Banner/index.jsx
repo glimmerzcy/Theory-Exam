@@ -1,7 +1,7 @@
 import React from 'react'
 import Slider from 'react-slick'
 import './Banner.css'
-import {settings} from '../config/component/Banner'
+import {settings} from '@config/component/Banner'
 
 class Banner extends React.Component{
   componentDidMount(){

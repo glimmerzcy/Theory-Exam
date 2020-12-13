@@ -1,9 +1,9 @@
 import React from 'react'
-import { post } from '../../utils/request'
-import { Exam } from '../../config/ClassDefine'
-import Route from '../../config/RouteConfig'
-import cookieManage from '../../utils/cookieManage'
-import { submitAnswer } from '../../pages/Exam/Exam'
+import { post } from '@utils/request'
+import { Exam } from '@config/ClassDefine'
+import Route from '@config/RouteConfig'
+import cookieManage from '@utils/cookieManage'
+import { submitAnswer } from '@pages/Exam'
 
 export default async (store, { paper_id, title, tip, duration, ended_at }) => {
     if (new Date() > new Date(ended_at)) {
@@ -71,6 +71,9 @@ export default async (store, { paper_id, title, tip, duration, ended_at }) => {
             }
         })
         exam.body = question
+        console.log("exam")
+        console.log(exam)
+        console.log(exam.body)
         exam.subjective = subjective;
 
         store.infoList.exam_paper = exam

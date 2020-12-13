@@ -1,16 +1,16 @@
-import React, { useState } from "react"
+import React from "react"
 import { observer } from "mobx-react"
 
 import "./EditPaper.css"
-import "../../utils/InnerWindow/InnerWindow"
-import Store from "../../utils/Store"
+import "@utils/InnerWindow/InnerWindow"
+import Store from "@utils/Store"
 
-import Editer from "../../components/EditCard"
-import { func_icon } from "../../config/page/EditPaper"
-import ConfigModel from "../../components/PaperConfig/index"
-import Time from "../../utils/Time"
-import "../../utils/InnerWindow/InnerWindow"
-import "../../components/PaperConfig/index.css"
+import Editer from "@components/EditCard"
+import { func_icon } from "@config/page/EditPaper"
+import ConfigModel from "@components/PaperConfig/index"
+import Time from "@utils/Time"
+import "@utils/InnerWindow/InnerWindow"
+import "@components/PaperConfig/index.css"
 
 @observer
 class ConfigSection extends React.Component {
@@ -143,91 +143,6 @@ class ConfigSection extends React.Component {
 }
 
 @observer
-class GM extends React.Component {
-    constructor(props) {
-        super(props)
-        if (!this.state) this.state = {}
-        this.state[this.props.index] = {
-            ...Store.infoList.paper.body[props.index].config
-        }
-    }
-    setClass = key => {
-        return {
-            onChange: this.onInput(key),
-            value: this.state[this.props.index][key],
-            min: 1,
-            type: "number"
-        }
-    }
-    onInput = key => {
-        return e => {
-            if (this.state[this.props.index][key] !== e.target.value) {
-                let { state } = this
-                state[this.props.index][key] = e.target.value
-                this.setState(state)
-            }
-        }
-    }
-    close = () => {
-        this.setState()
-        this.state[this.props.index] = {
-            ...Store.infoList.paper.body[this.props.index].config
-        }
-        this.setState(this.state)
-        window.closeIW()
-    }
-    submit = () => {
-        Store.infoList.paper.body[this.props.index].config = {
-            ...this.state[this.props.index]
-        }
-        calculateScore()
-        window.closeIW()
-    }
-    render() {
-        let { subtitle, type } = Store.infoList.paper.body[
-            this.props.index
-        ].config
-        return (
-            <div className="column aside ep-im-container">
-                <p className="row aside">
-                    <div className="column aside">
-                        <div>标题</div>
-                        <div>分值</div>
-                    </div>
-                    <div className="column aside">
-                        <input value={subtitle} disabled />
-                        <input {...this.setClass("point")} />
-                    </div>
-                    <div className="column aside">
-                        <div>题目类型</div>
-                        <div>出题数量</div>
-                    </div>
-                    <div className="column aside">
-                        <select value={type} disabled>
-                            <option value="sc">单选</option>
-                            <option value="mc">多选</option>
-                        </select>
-                        <input {...this.setClass("num")} />
-                    </div>
-                </p>
-                <p className="row around">
-                    <div className="iw-bn iw-confirm" onClick={this.submit}>
-                        确定
-                    </div>
-                    <div className="iw-bn iw-cancel" onClick={this.close}>
-                        取消
-                    </div>
-                </p>
-            </div>
-        )
-    }
-}
-
-export const GroupModel = GM
-
-let calculateScore
-
-@observer
 class EditPaper extends React.Component {
     constructor(props) {
         super(props)
@@ -235,15 +150,15 @@ class EditPaper extends React.Component {
             group: 0,
             score: 2
         }
-        calculateScore = () => {
-            let { score } = this.state,
-                current = Store.infoList.paper.calculateScore()
-            score !== current && this.setState({ score: current })
-        }
         this.fileSelector = React.createRef()
     }
+    calculateScore = () => {
+        let { score } = this.state,
+            current = Store.infoList.paper.calculateScore()
+        score !== current && this.setState({ score: current })
+    }
     componentWillMount() {
-        calculateScore()
+        this.calculateScore()
     }
     add = async () => {
         const { paper } = Store.infoList,
@@ -292,7 +207,7 @@ class EditPaper extends React.Component {
     }
 
     render() {
-        calculateScore()
+        this.calculateScore()
         const { paper } = Store.infoList,
             { head, body } = paper
         let { group, score } = this.state,
@@ -334,7 +249,7 @@ class EditPaper extends React.Component {
                         </div>
                     ))}
                     <div className="ep-quiz-card" onClick={this.addType}>
-                        <img src={require("../../assets/add-bright.png")} />
+                        <img src={require("../../assets/add-bright.png")} alt=""/>
                     </div>
                 </div>
                 <div className="ep-r">
@@ -351,6 +266,7 @@ class EditPaper extends React.Component {
                                         alt: item.alt,
                                         title: item.title
                                     }}
+                                    alt=""
                                 />
                             ))}
                         </div>
@@ -383,9 +299,10 @@ class EditPaper extends React.Component {
                                 className="responsive ep-add-quiz"
                                 onClick={this.add}
                             >
-                                <img
-                                    src={require("../../assets/add-char.png")}
-                                />
+                            <img
+                                src={require("../../assets/add-char.png")}
+                                alt=""
+                            />
                             </div>
                         </div>
                     </div>

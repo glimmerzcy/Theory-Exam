@@ -1,7 +1,7 @@
 import React from 'react'
 import { observer } from 'mobx-react'
 import './InfoCraousel.css'
-import { showingStyle, dot_config, long } from '../../config/component/Craousel'
+import { showingStyle, dot_config, long } from '@config/component/Craousel'
 
 @observer
 class InfoCraousel extends React.Component {

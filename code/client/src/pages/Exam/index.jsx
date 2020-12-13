@@ -1,17 +1,17 @@
 import React from "react"
 import { observer } from "mobx-react"
-import { Prompt, StaticRouter } from "react-router"
+import { Prompt} from "react-router"
 
-import Time from "../../utils/Time"
-import MathCAPTCHA from "../../utils/MathCAPTCHA/MathCAPTCHA"
-import Route from "../../config/RouteConfig"
+import Time from "@utils/Time"
+import MathCAPTCHA from "@utils/MathCAPTCHA/MathCAPTCHA"
+import Route from "@config/RouteConfig"
 
-import Store from "../../utils/Store"
+import Store from "@utils/Store"
 
 import "./Exam.css"
-import RouteConfig from "../../config/RouteConfig"
+import RouteConfig from "@config/RouteConfig"
 
-import cookieManage from "../../utils/cookieManage"
+import cookieManage from "@utils/cookieManage"
 
 let setQuizNavigator, getQuizUndo
 
@@ -230,12 +230,12 @@ class QuizNavigator extends React.Component {
                                 key={"exam-navigator-" + index}
                                 className="exam-navigator-bn"
                             >
-                                <a
+                                <div
                                     style={style(value)}
                                     onClick={this.scrollToAnchor(index + 1)}
                                 >
                                     {index + 1}
-                                </a>
+                                </div>
                                 {(index + 1) % 10 ? "" : <br />}
                             </span>
                         ))}
@@ -270,7 +270,7 @@ class Quiz extends React.Component {
         let items,
             func,
             origin = ["A", "B", "C"]
-        if (type == 0) {
+        if (type === 0) {
             origin.push("D")
             type = "radio"
             topic = "（单选）" + topic
@@ -283,7 +283,7 @@ class Quiz extends React.Component {
             ["D", "E", "F"].forEach(
                 char =>
                     quiz[`obj${char}`] &&
-                    quiz[`obj${char}`] != "" &&
+                    quiz[`obj${char}`] !== "" &&
                     origin.push(char)
             )
             type = "checkbox"
@@ -345,7 +345,6 @@ class Subjective extends React.Component {
     }
 
     copy = event => {
-        let text = document.getSelection().toString()
         event.clipboardData.setData("text/plain", "")
         event.preventDefault()
     }
@@ -385,7 +384,14 @@ let promptOFF
 class Exam extends React.Component {
     constructor(props) {
         super(props)
+        // const body = Store.infoList.exam_paper.body
+        // const subjective = Store.infoList.exam_paper.subjective
         const { body, subjective } = Store.infoList.exam_paper
+        console.log(body.target)
+        console.log(typeof body)
+        console.log(body.length)
+        console.log(body === null)
+
         this.state = {
             isCAPTCHA: false,
             blur_on: false,

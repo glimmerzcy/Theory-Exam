@@ -7,18 +7,16 @@ import { observer } from "mobx-react"
 import './App.css'
 
 //Global Component
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Navigator from './utils/Navigator'
-import InnerWindow from './utils/InnerWindow/InnerWindow'
+import Header from '@components/Header'
+// import Footer from '@components/Footer'
+import Navigator from '@utils/Navigator'
+import InnerWindow from '@utils/InnerWindow/InnerWindow'
 
 //Page
-import RouteConfig from './config/RouteConfig'
+import RouteConfig from '@config/RouteConfig'
 
 //State Manager Store
-import Store from './utils/Store'
-
-import Matrix from './utils/Matrix'
+import Store from '@utils/Store'
 
 //bind for test
 window.Store = Store
@@ -33,7 +31,7 @@ function routes() {
 
 @observer
 class App extends React.Component {
-  onContextMenu = e => Store.state.inExam && window.getSelection().toString() != '' && e.preventDefault()
+  onContextMenu = e => Store.state.inExam && window.getSelection().toString() !== '' && e.preventDefault()
   render() {
     return (
       <div onContextMenu={this.onContextMenu}>
@@ -44,7 +42,7 @@ class App extends React.Component {
           <div className='innerPage'>
             <Switch>{routes()}</Switch>
           </div>
-          <Footer />
+          {/* <Footer /> */}
         </Router>
       </div>
     )

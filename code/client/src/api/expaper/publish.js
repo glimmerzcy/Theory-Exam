@@ -1,13 +1,13 @@
-import { post } from '../../utils/request'
-import Route from '../../config/RouteConfig'
+import { post } from '@utils/request'
+import Route from '@config/RouteConfig'
 
 export default async (store) => {
     let postData
-    if (store.infoList.paper.head.aim == 0) {
+    if (store.infoList.paper.head.aim === 0) {
         postData = {
             paper_id: store.infoList.paper.head.id
         }
-    } else if (store.infoList.paper.head.aim == 1) {
+    } else if (store.infoList.paper.head.aim === 1) {
         postData = {
             paper_id: store.infoList.paper.head.id,
             college_codes: store.infoList.college_codes.map(ele => ele.id),

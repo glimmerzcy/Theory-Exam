@@ -14,7 +14,7 @@ export default async (store, getFile) => {
     try {
         let sheets = XLSX.read(new Uint8Array(e.target.result), { type: 'array' }).Sheets
         let students = XLSX.utils.sheet_to_json(sheets['Sheet1'])
-        if (!students[0]) throw '格式不正确'
+        if (!students[0]) throw new Error('格式不正确')
         let stu_ids = store.infoList.stu_table.reduce((acc, val) => acc[val[0]] = val[1] , {})
         for (let student of students) {
             let id = +student['学号']

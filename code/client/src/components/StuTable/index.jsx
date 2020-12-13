@@ -3,7 +3,7 @@ import { observer } from 'mobx-react'
 
 import './StuTable.css'
 
-import Store from '../utils/Store'
+import Store from '../.@utils/Store'
 
 let filter = Store.infoList.tableFilter
 
@@ -29,7 +29,7 @@ class StuTable extends React.Component {
           }
           //filter in single condition
         } else {
-          if (item == condition) {
+          if (item === condition) {
             result = true
             return
           }

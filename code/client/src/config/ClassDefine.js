@@ -1,6 +1,6 @@
 import { observable } from "mobx"
 import XLSX from "xlsx"
-import Time from "../utils/Time"
+import Time from ".@utils/Time"
 
 const af = "ABCDEF"
 
@@ -36,12 +36,12 @@ export class SubQuestion {
         return Q
     }
     setTitle(e) {
-        if (this.title == e.target.value) return
+        if (this.title === e.target.value) return
         this.title = e.target.value
     }
 
     setItem(e) {
-        if (this.item == e.target.value) return
+        if (this.item === e.target.value) return
         this.item = e.target.value
     }
 
@@ -84,7 +84,7 @@ export class Question {
         return Q
     }
     setTitle(e) {
-        if (this.title == e.target.value) return
+        if (this.title === e.target.value) return
         this.title = e.target.value
     }
     option = index => this.item[index]
@@ -112,7 +112,7 @@ export class Question {
         let arr = []
         this.item.forEach((opt, i) => opt.value && arr.push(af[i]))
         arr = arr.join("")
-        if (arr === "" && this.is_exist) throw "不允许没有正确答案"
+        if (arr === "" && this.is_exist) throw String("不允许没有正确答案")
         return arr
     }
     static parseFromRow(que, opts) {
@@ -208,12 +208,12 @@ export class Section {
 }
 
 const sheet_names = ["单选", "多选"],
-    opts = ["ABCD", af],
-    type_names = "sm"
+    opts = ["ABCD", af]
+    // type_names = "sm"
 const sheet_head = i => ["题干", ...opts[i].split(""), "答案"]
 
 // subjective
-const subjective_sheet_names = ["主观"]
+// const subjective_sheet_names = ["主观"]
 const subjective_sheet_head = i => ["题干", "答案"]
 
 export class Paper {
@@ -285,7 +285,7 @@ export class Paper {
             }).Sheets
             for (let i = 0; sheet_names[i]; i++) {
                 let ques = XLSX.utils.sheet_to_json(sheets[sheet_names[i]])
-                if (!ques[0]) throw "格式不正确"
+                if (!ques[0]) throw new Error("格式不正确")
                 for (let que of ques) {
                     paper.section(i).add(Question.parseFromRow(que, opts[i]))
                     await Time.sleep(1)
@@ -398,15 +398,15 @@ export class Paper {
         }
     })
     getAUpLoad() {
-        if (this.calculateScore() === 0) throw "不允许试卷为空"
+        if (this.calculateScore() === 0) throw new Error("不允许试卷为空")
         for (let i = 0; sheet_names[i]; ++i) {
             let sec = this.body[i]
             for (let quiz of sec.quesions()) {
                 if (!quiz.is_exist) continue
-                if (quiz.title === "") throw "不允许题目为空"
-                else if (sec.config.type != "sub") {
+                if (quiz.title === "") throw new Error("不允许题目为空")
+                else if (sec.config.type !== "sub") {
                     for (let opt of quiz.options())
-                        if (opt.text === "") throw "不允许选项为空"
+                        if (opt.text === "") throw Error("不允许选项为空")
                 }
             }
         }
@@ -494,10 +494,10 @@ export class Paper {
 export class Exam {
     @observable
     head = {
-        title: new String(),
-        start_date: new String(),
-        duration: new String(),
-        num: new Number()
+        title: '',
+        start_date: '',
+        duration: '',
+        num: 0
     }
     @observable
     body = [

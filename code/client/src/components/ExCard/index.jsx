@@ -1,13 +1,10 @@
 import React from 'react'
 
-import Store from '../utils/Store'
-import { func_icon } from '../config/component/ExCard'
+import Store from '../.@utils/Store'
+import { func_icon } from '@config/component/ExCard'
 import './ExCard.css'
 
 class ExCard extends React.Component {
-  constructor(props) {
-    super(props)
-  }
   del = () => {
     window.showModal({
       view: <h2>确认删除？</h2>,
@@ -36,13 +33,13 @@ class ExCard extends React.Component {
         <div className='excard-panel column aside'>
           {funcs.map(row =>
             <div className='row aside'>
-              {row.map(item => <img title={item.title} className='excard-icon pointer' src={require(`../assets/${item.icon}.png`)} onClick={item.click} />)}
+              {row.map(item => <img title={item.title} className='excard-icon pointer' src={require(`../assets/${item.icon}.png`)} onClick={item.click} alt=""/>)}
             </div>
           )}
         </div>
         <div className='excard-details column aside'>
           {
-            status != '未发布'
+            status !== '未发布'
             &&
             <div>
               <div className='excard-detail'>已有<span>{participated || 0}</span>人参加考试</div>

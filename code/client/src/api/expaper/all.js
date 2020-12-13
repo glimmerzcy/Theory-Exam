@@ -1,4 +1,4 @@
-import { get } from '../../utils/request'
+import { get } from '@utils/request'
 
 const date_list = {
   '未发布':'updated_at',

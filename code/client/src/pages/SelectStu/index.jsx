@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { fil_stu, college_head } from '../../config/component/StuTable'
-import StuTable from '../../components/StuTable'
-import CollegeTable from '../../components/CollegeTable'
+import { fil_stu, college_head } from '@config/component/StuTable'
+import StuTable from '@components/StuTable'
+import CollegeTable from '@components/CollegeTable'
 import { observer } from 'mobx-react'
-import Store from '../../utils/Store'
+import Store from '@utils/Store'
 
 import './index.css'
 
@@ -33,10 +33,10 @@ class SelStu extends React.Component {
     if (Store.infoList.stu_ids[filter_arr[0]]) {
         delete Store.infoList.stu_ids[filter_arr[0]]
     }
-    Store.infoList.stu_table = Store.infoList.stu_table.filter(ele => ele[0] != filter_arr[0])
+    Store.infoList.stu_table = Store.infoList.stu_table.filter(ele => ele[0] !== filter_arr[0])
   }
   onChange = i =>
-    e => filter_arr[i] != e.target.value ? filter_arr[i] = e.target.value : 0
+    e => filter_arr[i] !== e.target.value ? filter_arr[i] = e.target.value : 0
   onChosen = (i, str) =>
     () => {
       if (filter_arr[i].indexOf(str) < 0)
@@ -76,7 +76,7 @@ class SelStu extends React.Component {
       <div className='row aside'>
         <div className='fil-stu-table'>
             {
-                Store.infoList.paper.head.aim == 2
+                Store.infoList.paper.head.aim === 2
                 ? <StuTable head={fil_stu} />
                 : <CollegeTable head={college_head} />
             }
@@ -87,7 +87,7 @@ class SelStu extends React.Component {
           </p>
         </div>
         {
-            Store.infoList.paper.head.aim == 2 ?
+            Store.infoList.paper.head.aim === 2 ?
             <div className='fil-stu-er'>
                 <div className='fil-stu-er-head'>添加条件</div>
                 <div className='fil-stu-er-card column'>

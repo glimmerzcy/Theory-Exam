@@ -1,7 +1,7 @@
 import React from 'react'
 import Route from '../RouteConfig'
-import ConfigModal from '../../components/PaperConfig/index'
-import Store from '../../utils/Store'
+import ConfigModal from '@components/PaperConfig/index'
+import Store from '@utils/Store'
 
 export const func_icon = [
   {
@@ -57,7 +57,7 @@ export const func_icon = [
         window.showToast(' 请先保存题目后，再行发布')
         return
       }
-      if (Store.infoList.paper.head.aim == 0) {
+      if (Store.infoList.paper.head.aim === 0) {
             Store.request('expaper/publish')()
             return
       }

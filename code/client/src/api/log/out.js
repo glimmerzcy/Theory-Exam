@@ -1,5 +1,5 @@
-import { get } from '../../utils/request'
-import Route from '../../config/RouteConfig'
+import { get } from '@utils/request'
+import Route from '@config/RouteConfig'
 
 export default async (store) => {
     let response

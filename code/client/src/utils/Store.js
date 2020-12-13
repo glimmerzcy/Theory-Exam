@@ -1,8 +1,6 @@
-import React from "react"
-import { Link } from "react-router-dom"
 import { observable } from "mobx"
 import storable from "./ProtoStore"
-import { Paper } from "../config/ClassDefine"
+import { Paper } from "@config/ClassDefine"
 
 @storable
 class Store {
@@ -46,45 +44,6 @@ class Store {
                 date: "2018-11-16",
                 status: "已完成",
                 num: 1,
-                rate: 45
-            },
-            {
-                title: "自动化学院第三十六期形式与政策课网上测试",
-                date: "2018-11-17",
-                status: "已完成",
-                num: 2134,
-                rate: 1
-            },
-            {
-                title: "自动化学院第三十六期形式与政策课网上测试",
-                date: "2018-11-15",
-                status: "已发布",
-                num: 2134,
-                rate: 45
-            },
-            {
-                title: "自动化学院第三十六期形式与政策课网上测试",
-                date: "2018-12-15",
-                status: "未发布",
-                num: 2134,
-                rate: 45
-            },
-            {
-                title: "自动化学院第三十六期形式与政策课网上测试",
-                date: "2018-10-15",
-                num: 2134,
-                rate: 45
-            },
-            {
-                title: "自动化学院第三十六期形式与政策课网上测试",
-                date: "2017-10-15",
-                num: 2134,
-                rate: 45
-            },
-            {
-                title: "自动化学院第三十六期形式与政策课网上测试",
-                date: "2019-10-15",
-                num: 2134,
                 rate: 45
             }
         ],

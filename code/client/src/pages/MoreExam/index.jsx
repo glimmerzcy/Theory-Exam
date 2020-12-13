@@ -1,8 +1,8 @@
 import React from 'react'
-import Store from '../../utils/Store'
-import InfoList from '../../components/InfoList/InfoList'
-import { mypaper } from '../../config/page/Student' 
-import Banner from '../../components/Banner'
+import Store from '@utils/Store'
+import InfoList from '@components/InfoList/InfoList'
+import { mypaper } from '@config/page/Student' 
+import Banner from '@components/Banner'
 
 class MoreExam extends React.Component{
   render(){

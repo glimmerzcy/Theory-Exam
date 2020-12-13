@@ -1,5 +1,5 @@
-import { post } from '../../utils/request'
-import cookieManage from '../../utils/cookieManage'
+import { post } from '@utils/request'
+import cookieManage from '@utils/cookieManage'
 import React from 'react'
 
 

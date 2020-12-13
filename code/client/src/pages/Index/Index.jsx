@@ -1,17 +1,17 @@
 import React from "react"
 import { observer } from "mobx-react"
-import { score_text, score_text_color } from "../../config/page/Index"
-import "./Index.css"
+import { score_text, score_text_color } from "@config/page/Index"
+import "./index.css"
 
-import InfoList from "../../components/InfoList/InfoList"
-import Title from "../../components/InfoList/InfoTitle"
-import InfoCraousel from "../../components/InfoList/InfoCraousel"
-import Banner from "../../components/Banner"
+import InfoList from "@components/InfoList/InfoList"
+import Title from "@components/InfoList/InfoTitle"
+import InfoCraousel from "@components/InfoList/InfoCraousel"
+import Banner from "@components/Banner"
 
-import Store from "../../utils/Store"
-import checkPlatform from "../../utils/checkPlatform"
-import cookieManage from "../../utils/cookieManage"
-import { submitAnswer } from "../Exam/Exam"
+import Store from "@utils/Store"
+import checkPlatform from "@utils/checkPlatform"
+import cookieManage from "@utils/cookieManage"
+import { submitAnswer } from "../Exam"
 
 @observer
 class Index extends React.Component {

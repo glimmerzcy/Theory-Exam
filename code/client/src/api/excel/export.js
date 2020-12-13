@@ -1,5 +1,5 @@
 import XLSX from 'xlsx'
-import { post } from '../../utils/request'
+import { post } from '@utils/request'
 
 const head = ['学号', '姓名', '成绩', '学院', '是否通过']
 

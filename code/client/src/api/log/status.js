@@ -1,9 +1,9 @@
-import { get } from '../../utils/request'
+import { get } from '@utils/request'
 import React from 'react'
 import {
     Link
 } from 'react-router-dom'
-import Route from '../../config/RouteConfig'
+import Route from '@config/RouteConfig'
 
 export default async store => {
   let college_status, student_status
@@ -52,11 +52,17 @@ export default async store => {
                     data.test_time - data.tested_time,
                     data.score
                 ])
-            else if(data.status != '已结束' && data.tested_time - data.test_time < 0 && +data.is_exist && startTime > now)
+            else if(data.status !== '已结束' && data.tested_time - data.test_time < 0 && +data.is_exist && startTime > now)
                 store.infoList.mypaper[1].push([data.name, data.stu_status, data.tested_time, data.score])
             else
             store.infoList.mypaper[2].push([data.name, data.stu_status, data.tested_time, data.score])
     })
     window.navigateTo(Route.Student.route)
-  }
+  } 
+  // else {
+  //   console.log(Route.Index.route)
+  //   console.log("登录失败")
+  //   alert("登录失败")
+  //   window.navigateTo(Route.College.route)
+  // }
 }

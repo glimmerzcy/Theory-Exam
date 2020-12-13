@@ -1,5 +1,5 @@
 import React from 'react'
-import Store from '../../utils/Store'
+import Store from '@utils/Store'
 import RouteConfig from '../RouteConfig'
 
 let searchValue = ''

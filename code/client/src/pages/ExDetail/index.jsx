@@ -1,9 +1,9 @@
 import React from 'react'
-import Store from '../../utils/Store'
+import Store from '@utils/Store'
 
 import './ExDetail.css'
 
-import Chart from '../../components/ScoreChart'
+import Chart from '@components/ScoreChart'
 
 class ExDetail extends React.Component {
   render() {

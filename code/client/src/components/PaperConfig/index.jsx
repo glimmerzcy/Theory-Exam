@@ -1,8 +1,8 @@
 import React from 'react'
 import { observer } from 'mobx-react'
 
-import Store from '../../utils/Store'
-import '../../utils/InnerWindow/InnerWindow'
+import Store from '@utils/Store'
+import '@utils/InnerWindow/InnerWindow'
 import './index.css'
 
 const onError = async msg => {

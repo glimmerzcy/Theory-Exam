@@ -42,6 +42,7 @@ class Item extends React.Component {
                         title="删除选项"
                         src={require("../assets/delete.png")}
                         onClick={() => question.remove(index)}
+                        alt=""
                     />
                 )}
             </div>
@@ -139,6 +140,7 @@ class EditCard extends React.Component {
                         title="删除本题目"
                         src={require("../assets/rubbish.png")}
                         onClick={() => section.remove(id)}
+                        alt=""
                     />
                 </div>
                 <div className="ec-items">

@@ -1,5 +1,5 @@
-import { post } from '../../utils/request'
-import { Paper } from '../../config/ClassDefine'
+import { post } from '@utils/request'
+import { Paper } from '@config/ClassDefine'
 
 export default async (store, paper_id) => {
   let res
